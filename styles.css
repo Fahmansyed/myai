@@ -1,198 +1,125 @@
-/* General Styles */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
-
-body {
-    background-color: #f4f4f9;
-    color: #333;
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Adjust to control height */
 }
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+.cta-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #0056b3;
-    color: white;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    background-color: #333;
+    padding: 1rem;
 }
-
-.logo h2 {
-    display: inline-block;
-    margin: 0;
-    font-size: 24px;
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.logo img {
+    height: 50px;
+}
 .nav-links {
-    float: right;
+    list-style: none;
+    display: flex;
 }
-
-.nav-links li {
-    display: inline-block;
+.nav-links li a {
+    color: white;
+    text-decoration: none;
     margin-left: 20px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.nav-links a:hover {
-    background-color: white;
-    color: #0056b3;
-    border-radius: 5px;
-}
-
-
-
 /* Hero Section */
 .hero-section {
-    background: #e0f7ff;
-    padding: 100px 0;
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    color: white;
     text-align: center;
+    padding: 100px 20px;
 }
-
 .hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
-
 .cta-button {
-    background-color: #0056b3;
+    background-color: #ff6600;
     color: white;
     padding: 10px 20px;
-    border: None;
-    cursor: pointer;
-    font-size: 18px;
     text-decoration: none;
-    border-radius: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
-.cta-button:hover {
-    background-color: #003d7a;
-}
-
-/* Contact Us Section */
-.contact-us {
-    background-color: #fff;
-    padding: 50px 0;
+/* About Us Section */
+.about-us, .services, .contact-us {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.contact-us h2 {
-    margin-bottom: 20px;
+/* Services */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service-card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.service-card i {
+    font-size: 2rem;
+    color: #1cb5e0;
 }
 
-#contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
+/* Contact Form */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input:hover, textarea:hover {
-    border-color: #0056b3;
-}
-
-button.cta-button {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    background-color: #0056b3;
+.cta-button {
+    background-color: #1cb5e0;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-}
-
-button.cta-button:hover {
-    background-color: #003d7a;
 }
 
 /* Footer */
 footer {
-    background-color: #0056b3;
+    background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
-
 .social-icons a {
     color: white;
     margin: 0 10px;
-}
-
-.social-icons a:hover {
-    color: #e0f7ff;
-}
-.about-us, .services, .contact-us {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    flex-basis: 22%;
-    background-color: #f1f1f1;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-}
-
-.service-card i {
-    font-size: 3rem;
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer .social-icons a {
-    color: white;
-    margin: 0 10px;
     text-decoration: none;
-    font-size: 1.5rem;
 }
