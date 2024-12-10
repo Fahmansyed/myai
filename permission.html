@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Access Request</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #002f6c; /* Darker blue background */
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Centered Container Styling */
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.15); /* Slightly transparent overlay */
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            max-width: 500px;
+        }
+
+        /* Headings Styling */
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #f0f8ff; /* Light blue text */
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #d9e6f2; /* Soft light blue for contrast */
+        }
+
+        /* Buttons and Input Field */
+        button, input[type="text"] {
+            font-size: 1em;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            margin: 10px 0;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        button {
+            background-color: #0066cc; /* Vibrant blue button */
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        input[type="text"] {
+            width: 80%;
+            text-align: center;
+            border: 2px solid #0066cc;
+            background: rgba(0, 0, 0, 0.2); /* Transparent dark input */
+            color: #f0f8ff;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border: 2px solid #00bfff; /* Brighter blue on focus */
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Links inside buttons */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Divider Styling */
+        hr {
+            border: 0.5px solid rgba(255, 255, 255, 0.3);
+            margin: 30px 0;
+        }
+
+        /* Footer (Optional) */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Access Fahman Syed's GitHub Repositories</h1>
+        <p>You need permission to explore the repositories. Use the options below to proceed:</p>
+        
+        <!-- Request Access -->
+        <button>
+            <a href="mailto:syedfahman.data@gmail.com?subject=Request%20Access%20to%20GitHub%20Repositories">
+                Request Permission via Email
+            </a>
+        </button>
+
+        <hr>
+
+        <!-- Enter Passcode -->
+        <p>If you have a passcode, enter it below:</p>
+        <form onsubmit="verifyCode(event)">
+            <input type="text" id="passcode" placeholder="Enter Passcode" required />
+            <br>
+            <button type="submit">Verify Passcode</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Fahman Syed. All rights reserved.
+    </footer>
+
+    <script>
+        function verifyCode(event) {
+            event.preventDefault();
+            const enteredCode = document.getElementById("passcode").value;
+            const validCode = "FAHMAN123"; // Replace with your actual passcode logic.
+
+            if (enteredCode === validCode) {
+                alert("Access Granted! Redirecting to GitHub...");
+                window.location.href = "https://github.com/FahmanSyed"; // Replace with your GitHub URL.
+            } else {
+                alert("Invalid Passcode! Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
